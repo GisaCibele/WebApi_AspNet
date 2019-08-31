@@ -8,7 +8,9 @@ using System.Web.Mvc;
 
 namespace Impacta.Tarefas.Controllers
 {
-    public class RealBooksController : Controller
+
+	
+	public class RealBooksController : Controller
     {
         // GET: RealBooks
         public ActionResult Index()
@@ -54,14 +56,14 @@ namespace Impacta.Tarefas.Controllers
         {
             return View();
         }
-
+		[Authorize]
         // GET: RealBooks/Create
         public ActionResult Create()
         {
 
             return View();
         }
-
+		[Authorize]
         // POST: RealBooks/Create
         [HttpPost]
         public ActionResult Create(Editora collection)
